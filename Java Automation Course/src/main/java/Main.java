@@ -1,4 +1,4 @@
-package main.java.org.example;
+package main.java;
 
 import main.java.testFromLaptop.TestFromLaptop;
 import main.java.testFromPc.TestFromPc;
