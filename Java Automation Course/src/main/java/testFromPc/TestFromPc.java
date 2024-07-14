@@ -1,4 +1,4 @@
-package testFromPc;
+package main.java.testFromPc;
 
 public class TestFromPc {
     public static void test(){

@@ -1,7 +1,7 @@
-package org.example;
+package main.java;
 
-import testFromLaptop.TestFromLaptop;
-import testFromPc.TestFromPc;
+import main.java.testFromLaptop.TestFromLaptop;
+import main.java.testFromPc.TestFromPc;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
