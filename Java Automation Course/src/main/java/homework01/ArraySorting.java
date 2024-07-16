@@ -23,9 +23,5 @@ public class ArraySorting {
         for (int a : result){
             System.out.print(a + ", ");
         }
-
-
-
-
     }
 }
