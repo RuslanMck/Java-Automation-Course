@@ -1,7 +1,28 @@
 package main.java.homework01;
 
+import java.util.Scanner;
+
 public class ArraySorting {
-    public static void sortArray(int[] array){
+
+    Scanner scanner = new Scanner(System.in);
+
+    public int[] arrayFromConsole() {
+
+        System.out.print("Pleas enter array size:");
+
+        int input = scanner.nextInt();
+
+        int[] consoleInput = new int[input];
+
+        for (int i = 0; i < consoleInput.length; i++){
+            System.out.print("Pleas enter a value for " + i + " position:");
+            consoleInput[i] = scanner.nextInt();
+        }
+
+        return consoleInput;
+    }
+
+    public void sortArray(int[] array){
 
         int positiveValues = 0;
         int counter = 0;
@@ -21,7 +42,7 @@ public class ArraySorting {
         }
 
         for (int a : result){
-            System.out.print(a + ", ");
+            System.out.print(a + " ");
         }
     }
 }

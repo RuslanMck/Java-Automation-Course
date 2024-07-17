@@ -16,6 +16,10 @@ public class Main {
 //        Classwork01.MaxMinValue(initialArray);
 //        Classwork01.ArraySorting(initialArray);
 //        Classwork01.PrintOnlyPositiveNumber(initialArray);
-        Classwork01.PrintTillZero(initialArray);
+//        Classwork01.PrintTillZero(initialArray);
+
+        ArraySorting arraySorting = new ArraySorting();
+
+        arraySorting.sortArray(arraySorting.arrayFromConsole());
     }
 }
