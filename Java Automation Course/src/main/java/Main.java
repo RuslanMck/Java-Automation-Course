@@ -1,7 +1,9 @@
 import classwork.ComparatorByAge;
 import classwork.Student;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -30,5 +32,18 @@ public class Main {
         for (Student student : students){
             System.out.println(student.getName() + " " + student.getAge());
         }
+
+        /**
+         * Lists */
+
+        List<Student> studentsList = new ArrayList<>();
+        studentsList.add(new Student("Bob", 23));
+        studentsList.add(new Student("Xena", 45));
+        studentsList.add(new Student("Carl",60));
+        studentsList.add(new Student("Sam", 32));
+        studentsList.add(new Student("Anna", 20));
+
+        studentsList.sort(comparatorByAge);
+
     }
 }
