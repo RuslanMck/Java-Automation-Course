@@ -26,11 +26,18 @@ public class CalculatorTest {
     @Test
     public void testAddition(){
         Assert.assertEquals(4, calculator.calculate("2 + 2"));
+        Assert.assertEquals(60, calculator.calculate("20 + 40"));
     }
 
     @Test
     public void testSubtraction(){
         Assert.assertEquals(3, calculator.calculate("5 - 2"));
+        Assert.assertEquals(30, calculator.calculate("50 - 20"));
+    }
+
+    @Test
+    public void negativeTest(){
+        calculator.calculate("jkkjhkjhkj");
     }
 
     @AfterClass
