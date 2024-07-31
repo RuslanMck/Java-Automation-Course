@@ -1,77 +1,51 @@
-import classwork.ComparatorByAge;
-import classwork.Student;
-import homework.Books;
-import homework.Magazine;
-import homework.Printable;
+import homework.Car;
+import homework.Registration;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
 
-        List<Printable> booksAndMagazines = new ArrayList<>();
+//        Set<Car> cars1 = new HashSet<>();
+//
+//        cars1.add(new Car("BMW", 2011));
+//        cars1.add(new Car("Mazda", 2005));
+//        cars1.add(new Car("Ford", 2024));
+//        cars1.add(new Car("Ford", 2003));
+//        cars1.add(new Car("Lamborghini", 2022));
+//
+//
+//        Set<Car> cars2 = new HashSet<>();
+//
+//        cars2.add(new Car("Opel", 2020));
+//        cars2.add(new Car("Suzuki", 1995));
+//        cars2.add(new Car("Lamborghini", 2022));
+//        cars2.add(new Car("Ford", 2018));
+//        cars2.add(new Car("Mazda", 2010));
+//        cars2.add(new Car("Mazda", 2005));
+//
+//        Set<Car> unionSet = new HashSet<>(cars1);
+//        unionSet.addAll(cars2);
+//
+//        System.out.println("Union Set:");
+//        for(Car i : unionSet){
+//            System.out.println(i.getName());
+//        }
+//
+//        Set<Car> intersectionSet = new HashSet<>(cars1);
+//        intersectionSet.retainAll(cars2);
+//
+//
+//        System.out.println("Intersection Set:");
+//        for(Car i : intersectionSet){
+//            System.out.println(i.getName());
+//        }
 
-        booksAndMagazines.add(new Books("Dictionary"));
-        booksAndMagazines.add(new Books("CookingBook"));
-        booksAndMagazines.add(new Books("RomanticBook"));
-        booksAndMagazines.add(new Magazine("NationalGeographic"));
-        booksAndMagazines.add(new Magazine("NYTimes"));
-        booksAndMagazines.add(new Magazine("Health"));
-        booksAndMagazines.add(new Magazine("TopGear"));
 
-        System.out.println("============ Using print() method ============");
-        for (Printable i : booksAndMagazines) {
-            i.print();
+
+        if(Registration.checkRegistration("asd123_","asd123_", "asd123_")){
+            System.out.println("We are registered");
         }
-
-        System.out.println("============ Using printBooks() method ============");
-
-        Books.printBooks(booksAndMagazines);
-
-        System.out.println("============ Using printMagazines() method ============");
-
-        Magazine.printMagazine(booksAndMagazines);
-
-
-//        ComparatorByAge comparatorByAge = new ComparatorByAge();
-//
-//        Student[] students = {
-//                new Student("Bob", 23),
-//                new Student("Xena", 45),
-//                new Student("Carl",60),
-//                new Student("Sam", 32),
-//                new Student("Anna", 20)
-//        };
-//
-//        for (Student student : students){
-//            System.out.println(student.getName() + " " + student.getAge());
-//        }
-//
-//        System.out.println("===============Sorted by name===============");
-//        Arrays.sort(students);
-//        for (Student student : students){
-//            System.out.println(student.getName() + " " + student.getAge());
-//        }
-//        System.out.println("===============Sorted by age===============");
-//        Arrays.sort(students, comparatorByAge);
-//        for (Student student : students){
-//            System.out.println(student.getName() + " " + student.getAge());
-//        }
-//
-//        /**
-//         * Lists */
-//
-//        List<Student> studentsList = new ArrayList<>();
-//        studentsList.add(new Student("Bob", 23));
-//        studentsList.add(new Student("Xena", 45));
-//        studentsList.add(new Student("Carl",60));
-//        studentsList.add(new Student("Sam", 32));
-//        studentsList.add(new Student("Anna", 20));
-//
-//        studentsList.sort(comparatorByAge);
-
 
     }
 }
