@@ -1,22 +1,17 @@
-package main.java.animals;
+package animals;
 
-import main.java.Price;
 
-public class Cat extends Animal implements Price {
 
-    private int price;
+public class Cat extends Animal {
+
 
     public Cat(String name, int age, int price) {
-        super(name, age);
-        this.price = price;
+        super(name, age, price);
+
     }
 
     public void meow() {
         System.out.println("Meow");
     }
 
-    @Override
-    public int price() {
-        return price;
-    }
 }

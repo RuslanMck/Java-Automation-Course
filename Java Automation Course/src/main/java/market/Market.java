@@ -1,22 +1,22 @@
-package main.java.market;
+package market;
 
-import main.java.Price;
+import animals.Animal;
 
 import java.util.List;
 
-public class Market<T> {
+public class Market<T extends Animal> {
 
     private List<T> goods;
 
-    public Market(List<T> goods){
+    public Market(List<T> goods) {
         this.goods = goods;
     }
 
-    public T getGoodsByIndex(int index){
+    public T getGoodsByIndex(int index) {
         return goods.get(index);
     }
 
-//    public int getPriceByIndex(int index){
-//        return goods.get(index).price();
-//    }
+    public int getPriceByIndex(int index){
+        return goods.get(index).price();
+    }
 }

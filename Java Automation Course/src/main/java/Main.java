@@ -1,12 +1,10 @@
-package main.java;
 
-import main.java.animals.Animal;
-import main.java.animals.Cat;
-import main.java.animals.Dog;
-import main.java.market.Market;
-import main.java.toys.Car;
-import main.java.toys.Doll;
-import main.java.toys.Toy;
+
+import animals.Animal;
+import animals.Cat;
+import animals.Dog;
+import market.Market;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,23 +14,23 @@ public class Main {
 
         Buyer buyer = new Buyer(500);
 
-        Animal cat = new Cat("Cat_1", 1,10);
-        Animal dog = new Dog("Dog_1", 2, 20);
-        List<Animal> animalList = new ArrayList<>();
-        animalList.add(cat);
-        animalList.add(dog);
+        Cat cat1 = new Cat("Cat_1", 1,10);
+        Cat cat2 = new Cat("Cat_2", 2,20);
+        Dog dog1 = new Dog("Dog_1", 3, 30);
+        Dog dog2 = new Dog("Dog_2", 4, 40);
 
-        Toy doll = new Doll("Doll_1", "Yellow", 30);
-        Toy car = new Car("Car_1", "White", 40);
-        List<Toy> toyList = new ArrayList<>();
-        toyList.add(doll);
-        toyList.add(car);
+        List<Cat> catList = new ArrayList<>();
+        catList.add(cat1);
+        catList.add(cat2);
 
-        Market<Toy> toyMarket = new Market<>(toyList);
-        toyMarket.getGoodsByIndex(0).sayToy();
+        List<Dog> dogList = new ArrayList<>();
+        dogList.add(dog1);
+        dogList.add(dog2);
 
-        Market<Animal> animalMarket = new Market<>(animalList);
-        animalMarket.getGoodsByIndex(0).sayAnimal();
+
+        Market<Cat> catMarket = new Market<>(catList);
+        catMarket.getGoodsByIndex(0).meow();
+
 
     }
 }
