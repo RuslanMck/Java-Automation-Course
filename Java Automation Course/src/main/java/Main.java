@@ -1,15 +1,38 @@
 package main.java;
 
-import main.java.homework04.Calculator;
+import main.java.animals.Animal;
+import main.java.animals.Cat;
+import main.java.animals.Dog;
+import main.java.market.Market;
+import main.java.toys.Car;
+import main.java.toys.Doll;
+import main.java.toys.Toy;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Calculator.add(5,5,2,3));
-        System.out.println(Calculator.add(5.1,8.4,0.5));
-        System.out.println(Calculator.multiply(2,5,4));
-        System.out.println(Calculator.multiply(2.5,8.1,0.2));
-        System.out.println(Calculator.divide(20,5));
-        System.out.println(Calculator.divide(22.4,5,24.6));
-        System.out.println(Calculator.subtract(5,2,20));
+
+        Buyer buyer = new Buyer(500);
+
+        Animal cat = new Cat("Cat_1", 1,10);
+        Animal dog = new Dog("Dog_1", 2, 20);
+        List<Animal> animalList = new ArrayList<>();
+        animalList.add(cat);
+        animalList.add(dog);
+
+        Toy doll = new Doll("Doll_1", "Yellow", 30);
+        Toy car = new Car("Car_1", "White", 40);
+        List<Toy> toyList = new ArrayList<>();
+        toyList.add(doll);
+        toyList.add(car);
+
+        Market<Toy> toyMarket = new Market<>(toyList);
+        toyMarket.getGoodsByIndex(0).sayToy();
+
+        Market<Animal> animalMarket = new Market<>(animalList);
+        animalMarket.getGoodsByIndex(0).sayAnimal();
+
     }
 }
